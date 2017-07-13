@@ -91,23 +91,23 @@ h2.subtitle{
 }
 
 /*MENU*/
-#menusysteme{
+/*#menusysteme{
 	text-align:center;
-}
+}*/
 #systeme ul{
 	list-style:none;
-	text-align: center;
+	/*text-align: center;*/
 }
-
+/*
 #systeme li{
 	text-align:center;
-}
+}*/
 
 #systeme ul li a{
 	text-decoration: none;
 	font-size:3vw;
 	/*margin:0 125px;*/
-	padding:5px;
+	/*padding:5px;*/
 }
 
 #systeme ul li a:hover{
@@ -152,10 +152,10 @@ TROISIEME PAGE
 -------------------------------------*/
 
 /*MENU*/
-#fondamentaux nav{
+/*#fondamentaux nav{
  width:100%;
 
-}
+}*/
 
 #fondamentaux ul{
   list-style:none;
@@ -167,56 +167,42 @@ TROISIEME PAGE
 
 #fondamentaux ul li a{
 	text-decoration:none;
-	font-size: 30px;
+	font-size: 3vw;
 	text-align:center;
 }
 
 #fondamentaux ul li a:hover{
 	text-decoration:underline;
 }
+#schemafondamentaux{
+	text-align:center;
+}
 
 /*SCHEMA*/
 #schemafondamentaux img{
 	display:none;
-	/*position:absolute;
-	top:0;*/
+	width:25vw;
+/*	position:absolute;
+	top:0;
 	width:50%;
 	height:auto;
 	position:relative;
 	left:50%;
-	margin-left:-25%;
+	margin-left:-25%;*/
 }
 
 /*EXPLICATION*/
 #explicationfondamentaux p{
 	display:none;
-	font-size:25px;
+	font-size:2vw;
 	text-align:center;
-}
-
-
-/*TABLEAU*/
-table, td{
-	border-collapse:collapse;
-	/border: 1px solid white;
-	overflow:hidden;
-}
-table{
-	display: table-cell;
-    vertical-align: inherit;
-	
-}
-td{
-	width:25%;
-	padding:15px;
 }
 
 
 video{
 	display:none;
-	width:100%;
+	width:25vw;
 	height:auto;
-	/vertical-align:middle;
 }
 
 
@@ -241,7 +227,7 @@ footer{
 #retourtop{
 	display:none;
 }
-#retourtop  img{
+#retourtop img{
 	width:50%;
 	height:auto;
 }
