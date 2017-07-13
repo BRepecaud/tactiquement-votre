@@ -1,0 +1,335 @@
+*{
+  margin:0;
+  font-family: 'Just Another Hand', cursive;
+  color:white;
+  box-sizing: border-box;
+}
+
+html, body{
+	height:100%;
+	position:relative;
+}
+
+/*-----------------------------------
+PAGE D'ACCUEIL
+-------------------------------------*/
+
+
+/*FOND*/
+#pageaccueil{
+	background: url("../media/banniere.png");
+	background-size:cover;
+	/*background-position:center;
+	text-align:center;*/
+	width: 100%; 
+	/*height: 100%; */
+	min-height:100%;
+}
+
+
+h1#sitename{
+	font-size:10vw;
+}
+
+#title{
+	position:relative;
+	/*! top:50%; */
+	text-align:center;
+	margin-top: 25vh;
+}
+
+
+#nav-princ ul{
+  list-style:none;
+	width:100%;
+	text-align:center;
+	padding:0;
+	position:absolute;
+	bottom:0;
+}
+
+/*ITEMS*/
+#nav-princ ul li{
+	display:inline-block; 
+	float: none;
+}
+
+/*LIENS*/
+#nav-princ ul li a{
+	text-decoration: none;
+	/*font-size:50px;*/
+	font-size: 325%;
+	/*margin: 0px 150px;*/
+}
+
+#nav-princ ul li a:hover{
+	opacity:0.5;
+	background-color: transparent;
+}
+
+
+
+/*-----------------------------------
+DEUXIEME PAGE
+-------------------------------------*/
+
+
+#systeme, #fondamentaux{
+	background: url("../media/tableau.png");
+	background-size:cover;
+	width:100%;
+	height:100%;
+	margin-top:1px;
+}
+
+h2.subtitle{
+	/*font-size:60px;*/
+	font-size:4vw;
+	text-align:center;
+	/*! padding-top: 10px; */
+	/*! margin-bottom:20px; */
+}
+
+/*MENU*/
+#systeme ul{
+	list-style:none;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+/*#systeme li{
+	display:inline-block;
+	
+}*/
+
+#systeme ul li a{
+	text-decoration: none;
+	font-size:30px;
+	margin:0 125px;
+	padding:5px;
+}
+
+#systeme ul li a:hover{
+	border:1px solid white;
+	border-radius:30px;
+}
+
+/*---------------*/
+/*#explicationsysteme{
+	width:50%;
+	float:right;
+}*/
+
+/*#bloc-compo{
+	display:none;
+	margin-top:5%;
+}*/
+
+#explicationsysteme p{
+	font-size:2vw;
+	display:none;
+	overflow:hidden;
+}
+
+/*SCHEMAS*/
+#schemasysteme{
+	/*width:50%;
+	float:left;*/
+	text-align:center;
+}
+
+#schemasysteme img{
+  width:25vw;
+  display:none;
+}
+
+
+
+
+/*-----------------------------------
+TROISIEME PAGE
+-------------------------------------*/
+
+/*MENU*/
+#fondamentaux nav{
+ width:100%;
+
+}
+
+#fondamentaux ul{
+  list-style:none;
+}
+
+#fondamentaux ul li{
+	margin-top:30px;
+}
+
+#fondamentaux ul li a{
+	text-decoration:none;
+	font-size: 30px;
+	text-align:center;
+}
+
+#fondamentaux ul li a:hover{
+	text-decoration:underline;
+}
+
+/*SCHEMA*/
+#schemafondamentaux img{
+	display:none;
+	/*position:absolute;
+	top:0;*/
+	width:50%;
+	height:auto;
+	position:relative;
+	left:50%;
+	margin-left:-25%;
+}
+
+/*EXPLICATION*/
+#explicationfondamentaux p{
+	display:none;
+	font-size:25px;
+	text-align:center;
+}
+
+
+/*TABLEAU*/
+table, td{
+	border-collapse:collapse;
+	/border: 1px solid white;
+	overflow:hidden;
+}
+table{
+	display: table-cell;
+    vertical-align: inherit;
+	
+}
+td{
+	width:25%;
+	padding:15px;
+}
+
+
+video{
+	display:none;
+	width:100%;
+	height:auto;
+	/vertical-align:middle;
+}
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------
+FOOTER
+-------------------------------------*/
+footer{
+	position:fixed;
+	bottom: 0;
+	right:0;
+	width: 5%;
+}
+
+#retourtop{
+	display:none;
+}
+#retourtop  img{
+	width:50%;
+	height:auto;
+}
+
+
+
+
+/*-----------------------------------
+RESPONSIVE
+-------------------------------------*/
+
+
+/*
+@media(max-width:800px){
+	
+#nav-princ ul li a{
+	margin: 0px 50px;
+}
+	
+h1{
+	font-size:100px;
+}
+	
+#systeme ul li a {
+    text-decoration: none;
+    font-size: 30px;
+    margin: 0 50px;
+    padding: 5px;
+}
+	
+	
+#explicationsysteme p {
+    font-size: 20px;
+    display: none;
+}
+
+#schemasysteme img {
+    width: 70%;
+    display: none;
+}
+.schema {
+    position: relative;
+    left: 50%;
+    margin-left: -35%;
+    top: -25%;
+}
+	
+	#schemafondamentaux img {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 50%;
+    margin-left: -50%;
+}
+	
+	#explicationfondamentaux p {
+    display: none;
+    font-size: 20px;
+    text-align: center;
+}
+	
+}
+
+@media(max-width:600px){
+	
+	#explicationsysteme p {
+    font-size: 15px;
+    display: none;
+}
+	
+		#schemafondamentaux img {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 50%;
+    margin-left: -50%;
+}
+	
+	#explicationfondamentaux p {
+    display: none;
+    font-size: 12px;
+    text-align: center;
+}
+
+}
+*/
