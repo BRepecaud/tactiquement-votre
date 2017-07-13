@@ -1,2 +1,4 @@
 # tactiquement-votre
-Site décrivant certains aspects tactiques de base dans le football
+Site décrivant certains aspects tactiques de base dans le football.
+
+Développé avec Bootstrap.
