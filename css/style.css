@@ -58,7 +58,7 @@ h1#sitename{
 #nav-princ ul li a{
 	text-decoration: none;
 	/*font-size:50px;*/
-	font-size: 325%;
+	font-size: 4vw;
 	/*margin: 0px 150px;*/
 }
 
@@ -84,28 +84,29 @@ DEUXIEME PAGE
 
 h2.subtitle{
 	/*font-size:60px;*/
-	font-size:4vw;
+	font-size:3vw;
 	text-align:center;
 	/*! padding-top: 10px; */
 	/*! margin-bottom:20px; */
 }
 
 /*MENU*/
+#menusysteme{
+	text-align:center;
+}
 #systeme ul{
 	list-style:none;
-  text-align: center;
-  border-bottom: 1px solid white;
+	text-align: center;
 }
 
-/*#systeme li{
-	display:inline-block;
-	
-}*/
+#systeme li{
+	text-align:center;
+}
 
 #systeme ul li a{
 	text-decoration: none;
-	font-size:30px;
-	margin:0 125px;
+	font-size:3vw;
+	/*margin:0 125px;*/
 	padding:5px;
 }
 
