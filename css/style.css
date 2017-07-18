@@ -10,6 +10,7 @@ html, body{
 	position:relative;
 }
 
+
 /*-----------------------------------
 PAGE D'ACCUEIL
 -------------------------------------*/
@@ -144,9 +145,6 @@ h2.subtitle{
   display:none;
 }
 
-
-
-
 /*-----------------------------------
 TROISIEME PAGE
 -------------------------------------*/
@@ -206,8 +204,9 @@ video{
 }
 
 
-
-
+#videofondamentaux{
+	text-align:center;
+}
 
 
 
@@ -239,6 +238,21 @@ footer{
 RESPONSIVE
 -------------------------------------*/
 
+@media(max-width:768px){
+	video{
+		display:none;
+		width:50vw;
+		height:auto;
+	}
+}
+
+@media(max-width:992px){
+	video{
+		display:none;
+		width:50vw;
+		height:auto;
+	}
+}
 
 /*
 @media(max-width:800px){
