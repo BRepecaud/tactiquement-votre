@@ -133,34 +133,72 @@ Fonction animeFleche
 	function animeFleche(){
 		if($(document).scrollTop()>topbody){ //scrollTop: nb de px scrollé depuis le haut de la page 
 		// si la valeur du scroll top est supérieure à la hauteur du header 
-			$("#centermenu").fadeOut();
-			centerMenuPrincipal();
-			$("#retourtop").stop().fadeIn(500); //faire apparaitre la fleche
+			/*$("#centermenu").fadeOut();
+			centerMenuPrincipal();*/
+			$("#retourtop").fadeIn(500); //faire apparaitre la fleche
 		}
 		else{
-			$("#centermenu").fadeOut();
-			resetMenuPrincipal();
+			/*$("#centermenu").fadeOut();
+			resetMenuPrincipal();*/
 			$("#retourtop").fadeOut(500); //faire disparaitre la fleche
 		}
 	}
-	animeFleche();
-	
-	function resetMenuPrincipal(){
-		setTimeout(function(){
-			$("#centermenu").css("width", "100%");
-			$("#centermenu").stop().fadeIn();
-		},500);	
-	}
-
-	function centerMenuPrincipal(){
-		setTimeout(function(){
-			$("#centermenu").css("width", "auto");
-			$("#centermenu").stop().fadeIn();
-		},500);	
-	}	
+	//animeFleche();
 	
 	$(document).scroll(function(){
 		animeFleche();
 	});
+	
+/*ANIMATION DU MENU PRINCIPAL*/
+/*
+**************************
+Au clic sur système / Fondamentaux : fadeOut du menu, width auto (se mettra à gauche et laissera de la place pour la flèche retourtop), fadeIn
+Au clic sur retourtop : fadeOut du menu, width 100% (pour le centrer), fadeIn
+**************************
+*/
+	$("#centermenu").css("width", "100%");
+	
+	$("#centermenu a").click(function(){
+		$("#centermenu").fadeOut(-10);
+		animeFleche();
+		centerMenuPrincipal();
+	} );
+	
+	$("#retourtop").click(function(){
+		$("#centermenu").fadeOut();
+		animeFleche();
+		resetMenuPrincipal();
+	} )
+
+
+/*
+function resetMenuPrincipal
+-------------------------------
+	Exécution de cette fonction quand retour top
+	100% de width pour le menu (centré pour la page d'accueil)
+	Réapparition du menu après ce changement de width
+*/	
+	function resetMenuPrincipal(){
+		setTimeout(function(){
+			$("#centermenu").css("width", "100%");
+			$("#centermenu").fadeIn();
+		},1400);	
+	}
+
+/*
+function centerMenuPrincipal
+-------------------------------
+	Exécution de cette fonction quand clic sur fondamentaux / système
+	width auto pour le menu
+	Réapparition du menu après ce changement de width
+*/		
+	function centerMenuPrincipal(){
+		setTimeout(function(){
+			$("#centermenu").css("width", "auto");
+			$("#centermenu").fadeIn();
+		},1000);	
+	}	
+	
+
 	
 } );
