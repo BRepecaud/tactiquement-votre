@@ -1,3 +1,19 @@
+/*
+A FAIRE
+
+-Menu centré //////
+-Background menu principal : gribouillon gris / marque de brosse pour faire ressortir les items
+-Couleur police //////////
+-Animation écrite / cercle au survol : cf svg animation
+-RESPONSIVE
+-vidéo ytb
+-Référencement
+-Contenu : description système + montage vidéo
+-Description du sitename
+-Mockup
+
+*/
+
 *{
   margin:0;
   font-family: 'Just Another Hand', cursive;
@@ -40,13 +56,13 @@ h1#sitename{
 }
 
 
-#nav-princ ul{
-  list-style:none;
-	width:100%;
+#centermenu{
+	list-style:none;
+	/*width:100%;*/
 	text-align:center;
 	padding:0;
-	position:absolute;
-	bottom:0;
+	/*position:absolute;
+	bottom:0;*/
 }
 
 /*ITEMS*/
@@ -58,6 +74,7 @@ h1#sitename{
 /*LIENS*/
 #nav-princ ul li a{
 	text-decoration: none;
+	color:white;
 	/*font-size:50px;*/
 	font-size: 4vw;
 	/*margin: 0px 150px;*/
@@ -68,7 +85,9 @@ h1#sitename{
 	background-color: transparent;
 }
 
-
+#nav-princ ul li a:focus{
+	background-color:transparent;
+}
 
 /*-----------------------------------
 DEUXIEME PAGE
@@ -99,14 +118,15 @@ h2.subtitle{
 	list-style:none;
 	/*text-align: center;*/
 }
-/*
-#systeme li{
-	text-align:center;
+
+/*#systeme ul li{
+	border-bottom: 0px;
 }*/
 
 #systeme ul li a{
 	text-decoration: none;
 	font-size:3vw;
+	color:white;
 	/*margin:0 125px;*/
 	/*padding:5px;*/
 }
@@ -114,8 +134,12 @@ h2.subtitle{
 #systeme ul li a:hover{
 	border:1px solid white;
 	border-radius:30px;
+	background-color:transparent;	
 }
 
+#systeme ul li a:focus{
+	background-color:transparent;	
+}
 /*---------------*/
 /*#explicationsysteme{
 	width:50%;
@@ -163,15 +187,39 @@ TROISIEME PAGE
 	margin-top:30px;
 }
 
-#fondamentaux ul li a{
+/*#fondamentaux ul li a:hover{
+	text-decoration:underline;
+}*/
+
+/*------------------------------------------------------------
+Animation du lien (a)
+--------------------------------------------------------------*/
+#hoverwriting{
+	display:inline-block;
+	color:white;
 	text-decoration:none;
 	font-size: 3vw;
 	text-align:center;
 }
 
-#fondamentaux ul li a:hover{
-	text-decoration:underline;
+#hoverwriting::after{
+	content:'';
+	display:block;
+	width:0;
+	height:2px;
+	background:grey;
+	transition: width .3s;
 }
+
+#hoverwriting:hover{
+	color:grey;
+}
+
+#hoverwriting:hover::after{
+	width:100%;
+}
+/*----------------------------------*/
+
 #schemafondamentaux{
 	text-align:center;
 }
@@ -227,8 +275,8 @@ footer{
 	display:none;
 }
 #retourtop img{
-	width:50%;
 	height:auto;
+	width:2vw;
 }
 
 
