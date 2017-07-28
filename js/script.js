@@ -31,12 +31,19 @@ if: condition si le paragraphe et l'image ont la classe du lien cliqué (recupCl
 		
 	/*Rond autour de l'item cliqué*/	
 	
-		$('nav#compo ul li a').removeClass('selectionne');
+		/*$('nav#compo ul li a').removeClass('selectionne');
 		$( "nav#compo ul li a" ).css("border","0");
 		$(this).addClass('selectionne');
 		$(this).css("border","1px solid white"); 
 		$(this).css("border-radius","30px");
+		 center no-repeat 8vw transparent*/
+			
 		
+		/*$('nav#compo ul li a').removeClass('selectionne');
+		$( "nav#compo ul li a" ).css("background","none");
+		$(this).addClass('selectionne');
+		$(this).css("background-image","url('../media/cercle.png')");	
+		$('myOjbect').css('background-image', 'url(' + imageUrl + ')');*/
 		
 		event.preventDefault();
 
@@ -80,8 +87,6 @@ if: même condition que pour le système (recupClass)
 		
 
 		/*Item souligné*/
-		var that = $(this);
-		
 		$('nav#concept ul li a').removeClass('selectionne');
 		$( "nav#concept ul li a" ).css("color","white");
 		$(this).addClass('selectionne');
