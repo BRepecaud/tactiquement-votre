@@ -119,21 +119,24 @@ h2.subtitle{
 	/*text-align: center;*/
 }
 
-/*#systeme ul li{
-	border-bottom: 0px;
-}*/
+#systeme ul li{
+
+}
 
 #systeme ul li a{
 	text-decoration: none;
 	font-size:3vw;
 	color:white;
+	border:0;
 	/*margin:0 125px;*/
 	/*padding:5px;*/
 }
 
 #systeme ul li a:hover{
-	border:1px solid white;
-	border-radius:30px;
+	background:url("../media/cercle.png");
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:8vw;
 	background-color:transparent;	
 }
 
