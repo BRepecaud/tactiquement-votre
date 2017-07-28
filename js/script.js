@@ -14,8 +14,6 @@ if: condition si le paragraphe et l'image ont la classe du lien cliqué (recupCl
 */
 	$("nav#compo ul li a").stop().click(function(event){
 		
-
-		
 		var recupClass = $(this).attr("class");
 		//console.log(recupClass);
 
@@ -42,7 +40,6 @@ if: condition si le paragraphe et l'image ont la classe du lien cliqué (recupCl
 		
 		event.preventDefault();
 
-		
 });
 
 
@@ -73,21 +70,23 @@ if: même condition que pour le système (recupClass)
 			
 			if($("#schemafondamentaux img").hasClass(recupClass)){	
 				if($("#explicationfondamentaux p").hasClass(recupClass)){
-						if($("#videofondamentaux video").hasClass(recupClass)){
-							$("#schemafondamentaux img."+recupClass).fadeIn(1000);	
-							$("#explicationfondamentaux p."+recupClass).fadeIn(1000);		
-							$("#videofondamentaux video."+recupClass).fadeIn(1000);	
-						}	
-					}
+					if($("#videofondamentaux video").hasClass(recupClass)){
+						$("#schemafondamentaux img."+recupClass).fadeIn(1000);	
+						$("#explicationfondamentaux p."+recupClass).fadeIn(1000);		
+						$("#videofondamentaux video."+recupClass).fadeIn(1000);	
+					}	
+				}
 			}
 		
 
-		/*Item souligné*/	
+		/*Item souligné*/
+		var that = $(this);
 		
 		$('nav#concept ul li a').removeClass('selectionne');
-		$( "nav#concept ul li a" ).css("text-decoration","none");
+		$( "nav#concept ul li a" ).css("color","white");
 		$(this).addClass('selectionne');
-		$( this).css("text-decoration","underline");
+		// $(this).css("text-decoration","underline");
+		$(this).css("color","grey");
 		
 		event.preventDefault();
 
@@ -199,6 +198,17 @@ function centerMenuPrincipal
 		},1000);	
 	}	
 	
+/*ANIMATION DU MENU FONDAMENTAUX*/
+/*
+**************************
+Au survol soulignage
+**************************
 
-	
+https://codepen.io/martinwolf/pen/eNNdme
+*/
+	/*$("#fondamentaux ul li a").hover(function(){
+		$(this).animate({
+			border-bottom: "1px solid white"
+		},500 );
+	});*/
 } );
