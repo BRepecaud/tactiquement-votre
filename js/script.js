@@ -45,6 +45,14 @@ if: condition si le paragraphe et l'image ont la classe du lien cliqué (recupCl
 		$(this).css("background-image","url('../media/cercle.png')");	
 		$('myOjbect').css('background-image', 'url(' + imageUrl + ')');*/
 		
+		
+		$('nav#compo ul li a').removeClass('selectionne');
+		$( "nav#compo ul li a" ).css("color","white");
+		$(this).addClass('selectionne');
+		$(this).css("color","grey"); 
+
+		 
+		 
 		event.preventDefault();
 
 });
