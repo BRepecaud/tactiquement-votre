@@ -2,20 +2,22 @@ $(document).ready(function(){
 
 
 
-/**************************
+/*
+*************************
 AFFICHAGE DES SYSTEMES
 
 var recupClass: classe du lien cliqué
 
 if: condition si le paragraphe et l'image ont la classe du lien cliqué (recupClass)
 
-**************************/
+*************************
+*/
 	$("nav#compo ul li a").stop().click(function(event){
 		
 
 		
 		var recupClass = $(this).attr("class");
-		console.log(recupClass);
+		//console.log(recupClass);
 
 		//Cacher paragraphe/image à chaque clic (sorte de reset)
 		$("#explicationsysteme p").hide(); 
@@ -44,18 +46,24 @@ if: condition si le paragraphe et l'image ont la classe du lien cliqué (recupCl
 });
 
 
-/**************************
+/*
+*************************
 AFFICHAGE DES FONDAMENTAUX
 
 var recupClass: classe du lien cliqué
 
 if: même condition que pour le système (recupClass)
 
-**************************/
+*************************
+*/
+	$("#explicationfondamentaux p").hide();
+	$("#schemafondamentaux img").hide();
+	$("#videofondamentaux video").hide();
+
 	$("nav#concept ul li a").stop().click(function(event){
 		
 		var recupClass = $(this).attr("class");
-		console.log(recupClass);
+		//console.log(recupClass);
 
 			$("#explicationfondamentaux p").hide();
 			$("#schemafondamentaux img").hide();
@@ -107,14 +115,16 @@ $(".smoothscroll").click(function(event){
 
 
 /*FLECHE HAUT DE PAGE*/
-/***************************
+/*
+**************************
 Fonction animeFleche
 
 	var topbody: recupère la hauteur de la page d'accueil
 	
 	Faire apparaitre / disparaitre la flèche quand scroll + quand sort de la page d'accueil
 
-***************************/
+**************************
+*/
 
 	var topbody = $("#pageaccueil").offset().top; //offset().top: prend la hauteur du header
 	
@@ -123,19 +133,72 @@ Fonction animeFleche
 	function animeFleche(){
 		if($(document).scrollTop()>topbody){ //scrollTop: nb de px scrollé depuis le haut de la page 
 		// si la valeur du scroll top est supérieure à la hauteur du header 
-			$("#retourtop").stop().fadeIn(500); //faire apparaitre la fleche			
-			
+			/*$("#centermenu").fadeOut();
+			centerMenuPrincipal();*/
+			$("#retourtop").fadeIn(500); //faire apparaitre la fleche
 		}
 		else{
+			/*$("#centermenu").fadeOut();
+			resetMenuPrincipal();*/
 			$("#retourtop").fadeOut(500); //faire disparaitre la fleche
 		}
 	}
-
-	animeFleche();
+	//animeFleche();
 	
 	$(document).scroll(function(){
 		animeFleche();
 	});
+	
+/*ANIMATION DU MENU PRINCIPAL*/
+/*
+**************************
+Au clic sur système / Fondamentaux : fadeOut du menu, width auto (se mettra à gauche et laissera de la place pour la flèche retourtop), fadeIn
+Au clic sur retourtop : fadeOut du menu, width 100% (pour le centrer), fadeIn
+**************************
+*/
+	$("#centermenu").css("width", "100%");
+	
+	$("#centermenu a").click(function(){
+		$("#centermenu").fadeOut(-10);
+		animeFleche();
+		centerMenuPrincipal();
+	} );
+	
+	$("#retourtop").click(function(){
+		$("#centermenu").fadeOut();
+		animeFleche();
+		resetMenuPrincipal();
+	} )
 
 
+/*
+function resetMenuPrincipal
+-------------------------------
+	Exécution de cette fonction quand retour top
+	100% de width pour le menu (centré pour la page d'accueil)
+	Réapparition du menu après ce changement de width
+*/	
+	function resetMenuPrincipal(){
+		setTimeout(function(){
+			$("#centermenu").css("width", "100%");
+			$("#centermenu").fadeIn();
+		},1400);	
+	}
+
+/*
+function centerMenuPrincipal
+-------------------------------
+	Exécution de cette fonction quand clic sur fondamentaux / système
+	width auto pour le menu
+	Réapparition du menu après ce changement de width
+*/		
+	function centerMenuPrincipal(){
+		setTimeout(function(){
+			$("#centermenu").css("width", "auto");
+			$("#centermenu").fadeIn();
+		},1000);	
+	}	
+	
+
+	
 } );
