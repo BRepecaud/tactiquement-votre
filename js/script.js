@@ -46,9 +46,9 @@ if: condition si le paragraphe et l'image ont la classe du lien cliqué (recupCl
 		$('myOjbect').css('background-image', 'url(' + imageUrl + ')');*/
 		
 		
-		$('nav#compo ul li a').removeClass('selectionne');
+		$('nav#compo ul li a').removeClass('systactive');
 		$( "nav#compo ul li a" ).css("color","white");
-		$(this).addClass('selectionne');
+		$(this).addClass('systactive');
 		$(this).css("color","grey"); 
 
 		 
@@ -140,19 +140,24 @@ Fonction animeFleche
 
 	var topbody = $("#pageaccueil").offset().top; //offset().top: prend la hauteur du header
 	
-
-		
+	
 	function animeFleche(){
 		if($(document).scrollTop()>topbody){ //scrollTop: nb de px scrollé depuis le haut de la page 
 		// si la valeur du scroll top est supérieure à la hauteur du header 
 			/*$("#centermenu").fadeOut();
 			centerMenuPrincipal();*/
 			$("#retourtop").fadeIn(500); //faire apparaitre la fleche
+			
+			// centerMenuPrincipal();
 		}
 		else{
 			/*$("#centermenu").fadeOut();
 			resetMenuPrincipal();*/
+			console.log("breh");
 			$("#retourtop").fadeOut(500); //faire disparaitre la fleche
+			
+			/*$("#centermenu").fadeOut(-10);
+			resetMenuPrincipal();*/
 		}
 	}
 	//animeFleche();
@@ -161,67 +166,5 @@ Fonction animeFleche
 		animeFleche();
 	});
 	
-/*ANIMATION DU MENU PRINCIPAL*/
-/*
-**************************
-Au clic sur système / Fondamentaux : fadeOut du menu, width auto (se mettra à gauche et laissera de la place pour la flèche retourtop), fadeIn
-Au clic sur retourtop : fadeOut du menu, width 100% (pour le centrer), fadeIn
-**************************
-*/
-	$("#centermenu").css("width", "100%");
-	
-	$("#centermenu a").click(function(){
-		$("#centermenu").fadeOut(-10);
-		animeFleche();
-		centerMenuPrincipal();
-	} );
-	
-	$("#retourtop").click(function(){
-		$("#centermenu").fadeOut();
-		animeFleche();
-		resetMenuPrincipal();
-	} )
 
-
-/*
-function resetMenuPrincipal
--------------------------------
-	Exécution de cette fonction quand retour top
-	100% de width pour le menu (centré pour la page d'accueil)
-	Réapparition du menu après ce changement de width
-*/	
-	function resetMenuPrincipal(){
-		setTimeout(function(){
-			$("#centermenu").css("width", "100%");
-			$("#centermenu").fadeIn();
-		},1400);	
-	}
-
-/*
-function centerMenuPrincipal
--------------------------------
-	Exécution de cette fonction quand clic sur fondamentaux / système
-	width auto pour le menu
-	Réapparition du menu après ce changement de width
-*/		
-	function centerMenuPrincipal(){
-		setTimeout(function(){
-			$("#centermenu").css("width", "auto");
-			$("#centermenu").fadeIn();
-		},1000);	
-	}	
-	
-/*ANIMATION DU MENU FONDAMENTAUX*/
-/*
-**************************
-Au survol soulignage
-**************************
-
-https://codepen.io/martinwolf/pen/eNNdme
-*/
-	/*$("#fondamentaux ul li a").hover(function(){
-		$(this).animate({
-			border-bottom: "1px solid white"
-		},500 );
-	});*/
 } );
