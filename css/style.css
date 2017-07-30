@@ -2,7 +2,12 @@
 A FAIRE
 
 -Menu centré //////
+
+**********************************
 -Background menu principal : gribouillon gris / marque de brosse pour faire ressortir les items
+li class active
+***************************************
+
 -Couleur police //////////
 -Animation écrite / cercle au survol : cf svg animation
 -RESPONSIVE
@@ -88,6 +93,9 @@ h1#sitename{
 #nav-princ ul li a:focus{
 	background-color:transparent;
 }
+.active{
+	background:url(../media/brosse.png);
+}
 
 /*-----------------------------------
 DEUXIEME PAGE
@@ -119,9 +127,6 @@ h2.subtitle{
 	/*text-align: center;*/
 }
 
-#systeme ul li{
-
-}
 
 #systeme ul li a{
 	text-decoration: none;
@@ -132,13 +137,14 @@ h2.subtitle{
 	/*padding:5px;*/
 }
 
-#systeme ul li a:hover{
-	background:url("../media/cercle.png");
+#systeme ul li a:hover, .systactive{
+	background:url("../media/cercle.svg");
 	background-position:center;
 	background-repeat:no-repeat;
 	background-size:8vw;
 	background-color:transparent;	
 }
+
 
 #systeme ul li a:focus{
 	background-color:transparent;	
@@ -231,13 +237,6 @@ Animation du lien (a)
 #schemafondamentaux img{
 	display:none;
 	width:25vw;
-/*	position:absolute;
-	top:0;
-	width:50%;
-	height:auto;
-	position:relative;
-	left:50%;
-	margin-left:-25%;*/
 }
 
 /*EXPLICATION*/
