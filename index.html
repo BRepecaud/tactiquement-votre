@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
 	<title>Tactiquement Vôtre</title>
 	<meta charset="UTF-8">
@@ -9,15 +8,15 @@
 	<meta name="viewport" content="width:device-width,initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
 	<link rel="icon" type="image/png" href="media/icone.png" />
+	
 	<!--SCRIPT-->	
 	<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 	<script type="text/javascript" src="js/script.js"></script>
+	
 	<!-- CDN BOOTSTRAP -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
-	
 <body>
 
 <!--PAGE ACCUEIL-->
@@ -30,18 +29,36 @@
 		
 		<div class="row">
 			<nav id="nav-princ" class="navbar navbar-fixed-bottom">
-				<div class="container-fluid">
+				<div id="container-princ" class="container-fluid">
+				
+					<!--HAMBURGER (responsive)-->
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuprincipal">
-							<img src="media/hamburger.png">
+							<img id="hamburger" src="media/hamburger.png" width="40vw">
 						</button>
 					</div>
+					<!---->
+					
+					<!--MENU PRINCIPAL-->
 					<div class="collapse navbar-collapse" id="menuprincipal">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="#systeme" class="smoothscroll">Système ?</a></li>
+						
+						<!--Items principaux-->
+						<ul id="centermenu" class="nav navbar-nav navbar-left">
+							<li><a href="#systeme" class="smoothscroll">Système ?</a></li>
 							<li><a href="#fondamentaux" class="smoothscroll">Fondamentaux</a></li>
+						<!--Flèche du haut-->
+
+							<li id="top">
+								<a href="#pageaccueil" id="retourtop" class="smoothscroll">
+									<img src="media/fleche_haut.png">
+								</a>
+							</li>
+
 						</ul>
+						<!---->
+						
 					</div>
+					<!---->
 				</div>
 			</nav>
 		</div>
@@ -55,6 +72,8 @@
 				<h2 class="subtitle">SYSTEME ?</h2>
 			</div>
 		</div>
+		
+		<!--MENU SYSTEME-->
 		<div class="row" id="menusysteme">
 			<nav id="compo" class="col-lg-12 col-md-12 col-xs-12">
 				<ul class="nav nav-tabs nav-justified">
@@ -65,14 +84,18 @@
 				</ul>
 			</nav>
 		</div>
+		<!---->
+		
+		<!--SCHEMA SYSTEME-->
 		<div id="bloc-compo" class="row">
 			<div id="schemasysteme" class="col-lg-4 col-md-4 col-xs-12">
-				<img class="442 schema" src="media/442.png" alt="442, sytème classique équilibré football"> <!--ALT !!!!!!!!!!!-->
+				<img class="442 schema" src="media/442.png" alt="442, sytème classique équilibré football">
 				<img class="433 schema" src="media/433.png" alt="433, sytème offensif football">
 				<img class="451 schema" src="media/451.png" alt="451, sytème milieu regroupé et dense football">
 				<img class="352 schema" src="media/352.png" alt="352, sytème dense efficace football">
 			</div>
-			
+		<!---->
+		
 			<div id="explicationsysteme" class="col-lg-8 col-md-8 col-xs-12">
 			
 			<!--PREMIER PARAGRAPHE-->
@@ -96,7 +119,8 @@
 				Donec ut felis eu mauris sodales dictum. Vestibulum eu dui dignissim, feugiat leo vel, rhoncus justo. 
 				Mauris non metus cursus enim pharetra bibendum. Quisque pretium sem a risus cursus, ut ultricies metus tincidunt. 
 				</p>
-				
+			<!---->
+			
 			<!--DEUXIEME PARAGRAPHE-->
 				<p class="433 col-lg-12 col-md-12 col-xs-12"><b>Description du système</b><br>
 				433 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -118,6 +142,7 @@
 				Donec ut felis eu mauris sodales dictum. Vestibulum eu dui dignissim, feugiat leo vel, rhoncus justo. 
 				Mauris non metus cursus enim pharetra bibendum. Quisque pretium sem a risus cursus, ut ultricies metus tincidunt. 
 				</p>
+			<!---->
 			
 			<!--TROISIEME PARAGRAPHE-->
 				<p class="451 col-lg-12 col-md-12 col-xs-12"><b>Description du système</b><br>
@@ -140,7 +165,8 @@
 				Donec ut felis eu mauris sodales dictum. Vestibulum eu dui dignissim, feugiat leo vel, rhoncus justo. 
 				Mauris non metus cursus enim pharetra bibendum. Quisque pretium sem a risus cursus, ut ultricies metus tincidunt. 
 				</p>				
-				
+			<!---->
+			
 			<!--QUATRIEME PARAGRAPHE-->
 				<p class="352 col-lg-12 col-md-12 col-xs-12"><b>Description du système</b><br>
 				352 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -162,6 +188,7 @@
 				Donec ut felis eu mauris sodales dictum. Vestibulum eu dui dignissim, feugiat leo vel, rhoncus justo. 
 				Mauris non metus cursus enim pharetra bibendum. Quisque pretium sem a risus cursus, ut ultricies metus tincidunt. 
 				</p>
+			<!---->	
 			</div>
 		</div>
 
@@ -177,24 +204,30 @@
 		</div>
 		
 		<div class="row">
+		
+		<!--MENU FONDAMENTAUX-->
 			<div class="col-lg-3 col-md-3 col-xs-4">
 				<nav id="concept">
 					<ul>
-						<li><a href="#" class="3homme">Troisième homme</a></li>
-						<li><a href="#" class="sansballon">Jeu sans ballon</a></li>
-						<li><a href="#" class="priseinfo">Prise d'information</a></li>
+						<li><a href="#" id="hoverwriting" class="3homme">Troisième homme</a></li>
+						<li><a href="#" id="hoverwriting" class="sansballon">Jeu sans ballon</a></li>
+						<li><a href="#" id="hoverwriting" class="priseinfo">Prise d'information</a></li>
 					</ul>
 				</nav>
 			</div>
 			
-			<div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8  col-xs-8"> 
 			
+			<div class="col-lg-offset-1 col-lg-8 col-md-offset-1 col-md-8  col-xs-8"> 
+				
+				<!--SCHEMA-->
 				<div id="schemafondamentaux" class="col-lg-12 col-md-12 col-xs-12">
 					<img class="3homme" src="media/troisieme_homme.png" alt="Recherche de l'homme libre est primordiale">
 					<img class="sansballon" src="media/sansballon.png" alt="Le jeu sans ballon dans le football est la clé du jeu">
 					<img class="priseinfo" src="media/priseinfo.png" alt="Prendre l'information, avoir un temps d'avance sur les autres">
 				</div>
+				<!---->
 				
+				<!--PARAGRAPHE-->
 				<div id="explicationfondamentaux" class="col-lg-6 col-md-12 col-xs-12">
 					<p class="3homme">Le <b>troisième homme</b>, c'est le dernier angle du triangle, le résultat d'un mouvement de passe 
 						qui a permis à ce joueur d'être <b>libre de tout marquage</b>. 
@@ -210,25 +243,19 @@
 						d'être à même d'accélérer le jeu d'un seul coup d'oeil.
 					</p>
 				</div>
+				<!---->
 				
+				<!--VIDEO-->
 				<div id="videofondamentaux" class="col-lg-5 col-md-12  col-xs-12">
 					<video controls src="media/3homme.mp4" class="3homme" alt="Recherche de l'homme libre est primordiale"></video>
 					<video controls src="media/sansballon.mp4" class="sansballon" alt="Le jeu sans ballon dans le football est la clé du jeu"></video>
 					<video controls src="media/priseinfo.mp4" class="priseinfo" alt="Prendre l'information avant de recevoir le ballon"></video>			
 				</div>
+				<!---->
+				
 			</div>
 		</div>
 	</div>
 <!---->
-	
-	 <!--PIED DE PAGE-->	
-	<footer>
-		<a href="#pageaccueil" id="retourtop" class="smoothscroll">
-			<img src="media/fleche_haut.png">
-		</a>
-	</footer>
-
 </body>	
-
-
 </html>
