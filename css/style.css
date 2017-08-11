@@ -1,24 +1,3 @@
-/*
-A FAIRE
-
--Menu centré //////
-
-**********************************
--Background menu principal : gribouillon gris / marque de brosse pour faire ressortir les items
-li class active
-***************************************
-
--Couleur police //////////
--Animation écrite / cercle au survol : cf svg animation
--RESPONSIVE
--vidéo ytb
--Référencement
--Contenu : description système + montage vidéo
--Description du sitename
--Mockup
-
-*/
-
 *{
   margin:0;
   font-family: 'Just Another Hand', cursive;
@@ -37,7 +16,7 @@ PAGE D'ACCUEIL
 -------------------------------------*/
 
 
-/*FOND*/
+/*---------------------------FOND*/
 #pageaccueil{
 	background: url("../media/banniere.png");
 	background-size:cover;
@@ -61,22 +40,45 @@ h1#sitename{
 }
 
 
-#centermenu{
-	list-style:none;
-	/*width:100%;*/
-	text-align:center;
-	padding:0;
-	/*position:absolute;
-	bottom:0;*/
+/*---------------------------MENU PRINCIPAL*/
+#menuprincipal{	
+	background-color:#1C1C1C;
+	opacity:.85;
 }
 
-/*ITEMS*/
+#container-princ{
+	padding:0;
+}
+
+#hamburger{
+	opacity:.65;
+}
+
+/*---------------------------Retour top*/
+#top{
+	position:fixed;
+	vertical-align:middle;
+	bottom:0;
+	right:0;
+	padding:.5;
+}
+
+#retourtop{
+	display:none;
+}
+
+#retourtop img{
+	height:auto;
+	width:2vw;
+}
+
+/*---------------------------ITEMS*/
 #nav-princ ul li{
 	display:inline-block; 
 	float: none;
 }
 
-/*LIENS*/
+/*---------------------------LIENS*/
 #nav-princ ul li a{
 	text-decoration: none;
 	color:white;
@@ -87,14 +89,11 @@ h1#sitename{
 
 #nav-princ ul li a:hover{
 	opacity:0.5;
-	background-color: transparent;
+	background-color:transparent;
 }
 
 #nav-princ ul li a:focus{
 	background-color:transparent;
-}
-.active{
-	background:url(../media/brosse.png);
 }
 
 /*-----------------------------------
@@ -111,20 +110,13 @@ DEUXIEME PAGE
 }
 
 h2.subtitle{
-	/*font-size:60px;*/
 	font-size:3vw;
 	text-align:center;
-	/*! padding-top: 10px; */
-	/*! margin-bottom:20px; */
 }
 
-/*MENU*/
-/*#menusysteme{
-	text-align:center;
-}*/
+/*---------------------------MENU*/
 #systeme ul{
 	list-style:none;
-	/*text-align: center;*/
 }
 
 
@@ -133,8 +125,6 @@ h2.subtitle{
 	font-size:3vw;
 	color:white;
 	border:0;
-	/*margin:0 125px;*/
-	/*padding:5px;*/
 }
 
 #systeme ul li a:hover, .systactive{
@@ -150,23 +140,15 @@ h2.subtitle{
 	background-color:transparent;	
 }
 /*---------------*/
-/*#explicationsysteme{
-	width:50%;
-	float:right;
-}*/
 
-/*#bloc-compo{
-	display:none;
-	margin-top:5%;
-}*/
-
+/*---------------------------Paragraphe*/
 #explicationsysteme p{
 	font-size:2vw;
 	display:none;
 	overflow:hidden;
 }
 
-/*SCHEMAS*/
+/*---------------------------SCHEMAS*/
 #schemasysteme{
 	/*width:50%;
 	float:left;*/
@@ -182,11 +164,7 @@ h2.subtitle{
 TROISIEME PAGE
 -------------------------------------*/
 
-/*MENU*/
-/*#fondamentaux nav{
- width:100%;
-
-}*/
+/*---------------------------MENU*/
 
 #fondamentaux ul{
   list-style:none;
@@ -195,10 +173,6 @@ TROISIEME PAGE
 #fondamentaux ul li{
 	margin-top:30px;
 }
-
-/*#fondamentaux ul li a:hover{
-	text-decoration:underline;
-}*/
 
 /*------------------------------------------------------------
 Animation du lien (a)
@@ -233,13 +207,13 @@ Animation du lien (a)
 	text-align:center;
 }
 
-/*SCHEMA*/
+/*---------------------------SCHEMA*/
 #schemafondamentaux img{
 	display:none;
 	width:25vw;
 }
 
-/*EXPLICATION*/
+/*---------------------------EXPLICATION*/
 #explicationfondamentaux p{
 	display:none;
 	font-size:2vw;
@@ -257,30 +231,6 @@ video{
 #videofondamentaux{
 	text-align:center;
 }
-
-
-
-
-
-
-/*-----------------------------------
-FOOTER
--------------------------------------*/
-footer{
-	position:fixed;
-	bottom: 0;
-	right:0;
-	width: 5%;
-}
-
-#retourtop{
-	display:none;
-}
-#retourtop img{
-	height:auto;
-	width:2vw;
-}
-
 
 
 
@@ -303,84 +253,3 @@ RESPONSIVE
 		height:auto;
 	}
 }
-
-/*
-@media(max-width:800px){
-	
-#nav-princ ul li a{
-	margin: 0px 50px;
-}
-	
-h1{
-	font-size:100px;
-}
-	
-#systeme ul li a {
-    text-decoration: none;
-    font-size: 30px;
-    margin: 0 50px;
-    padding: 5px;
-}
-	
-	
-#explicationsysteme p {
-    font-size: 20px;
-    display: none;
-}
-
-#schemasysteme img {
-    width: 70%;
-    display: none;
-}
-.schema {
-    position: relative;
-    left: 50%;
-    margin-left: -35%;
-    top: -25%;
-}
-	
-	#schemafondamentaux img {
-    display: none;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: auto;
-    position: relative;
-    left: 50%;
-    margin-left: -50%;
-}
-	
-	#explicationfondamentaux p {
-    display: none;
-    font-size: 20px;
-    text-align: center;
-}
-	
-}
-
-@media(max-width:600px){
-	
-	#explicationsysteme p {
-    font-size: 15px;
-    display: none;
-}
-	
-		#schemafondamentaux img {
-    display: none;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: auto;
-    position: relative;
-    left: 50%;
-    margin-left: -50%;
-}
-	
-	#explicationfondamentaux p {
-    display: none;
-    font-size: 12px;
-    text-align: center;
-}
-
-}
-*/
